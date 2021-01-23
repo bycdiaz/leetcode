@@ -15,9 +15,8 @@ function smallerNumbersThanCurrent(numbers) {
   for (let index = 0; index < numbers.length; index++) {
     const currentNumber = numbers[index];
     const placeInSorted = sortedNumbers.indexOf(currentNumber);
-    const numbersToLeftOfCurrent = sortedNumbers.slice(0, placeInSorted).length;
 
-    smallerNumbers.push(numbersToLeftOfCurrent)
+    smallerNumbers.push(placeInSorted)
   }
 
   return smallerNumbers;
