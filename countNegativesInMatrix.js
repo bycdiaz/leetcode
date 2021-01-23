@@ -3,10 +3,9 @@
 // numbers in grid.
 
 function countNegatives(grid) {
-  return grid.reduce((totalNegatives, array) => {
-    array.forEach(number => {
-      if (number < 0) totalNegatives++;
-    })
+  const combinedArray = [].concat(...grid);
+  return combinedArray.reduce((totalNegatives, number) => {
+    if (number < 0) totalNegatives++;
 
     return totalNegatives;
   }, 0)
